@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "lessc public/stylesheets/style.less public/stylesheets/style.css; node index.js"
   },
   "dependencies": {
     "express": "3.1.1",
     "jade": "*",
-    "less": "*"
+    "less": "*",
+    "markdown": "*"
   }
 }
