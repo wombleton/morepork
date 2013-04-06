@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  p Working it all out...
-
-  div!= md(article)
+  h3= article.title
+  p= article.publishedDate
+  div!= md(article.body)

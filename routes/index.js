@@ -3,7 +3,12 @@ var md = require('markdown').markdown.toHTML;
 
 exports.index = function(req, res) {
   res.render('index', { 
-  md: md,
-  'title': 'Morepork', 
-  'article': 'This is the *shizzle*' });
+    md: md,
+    'title': 'Morepork', 
+    'article': {
+      'title': 'Having so much fun!',
+      'publishedDate': '2013-04-06',
+      'body': 'This is the *shizzle*'
+    }
+  });
 };
