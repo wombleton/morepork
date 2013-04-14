@@ -7,7 +7,7 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     log = require('debug_log').debug_log,
-    repository = require('repository');
+    db = require('./lib/db');
 
 const PORT_NUMBER = 4949;
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 app.get('/users', user.list);
 
-repository.connect();
+db.connect();
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

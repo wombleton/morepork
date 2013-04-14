@@ -1,10 +1,10 @@
 /* GET home page */
 var md = require('markdown').markdown.toHTML,
-    repository = require('repository');
+    db = require('../lib/db');
 
 exports.index = function(req, res) {
 
-  repository.getArticle(1, function(err, article) {
+  db.getArticle(1, function(err, article) {
       if (err) throw err;
 
     res.render('index',  { md: md, title: 'Morepork', article: article });
