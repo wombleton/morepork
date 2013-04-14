@@ -8,7 +8,7 @@ exports.index = function(req, res) {
     'article': {
       'title': 'Having so much fun!',
       'publishedDate': '2013-04-06',
-      'body': 'This is the *shizzle*'
+      'body': 'This is the *shizzle*. I am having so much fun, and we just did [Codemania](http://codemania.co.nz/)'
     }
   });
 };
